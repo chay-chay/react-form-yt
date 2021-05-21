@@ -1,6 +1,7 @@
 import React from "react";
 import useForm from "./useForm";
 import validate from "./validateInfo";
+import './Form.css'
 
 const FormSignup = () => {
   const { handleChange, values, handleSubmit, errors } = useForm(validate);
@@ -12,7 +13,7 @@ const FormSignup = () => {
             Get started with us today! Create your account by filling out the
             information below,
           </h1>
-          <div className="form-input">
+          <div className="form-inputs">
             <label htmlFor="username" className="form-label">
               Username
             </label>
@@ -29,7 +30,7 @@ const FormSignup = () => {
             {/* If errors.username true, then it will shows errors.username */}
           </div>
 
-          <div className="form-input">
+          <div className="form-inputs">
             <label htmlFor="email" className="form-label">
               Email
             </label>
@@ -45,7 +46,7 @@ const FormSignup = () => {
                       {errors.email && <p>{errors.email}</p>}
           </div>
 
-          <div className="form-input">
+          <div className="form-inputs">
             <label htmlFor="password" className="form-label">
               Password
             </label>
@@ -61,7 +62,7 @@ const FormSignup = () => {
             {errors.password && <p>{errors.password}</p>}
           </div>
 
-          <div className="form-input">
+          <div className="form-inputs">
             <label htmlFor="password2" className="form-label">
               Confirmed Password
             </label>
