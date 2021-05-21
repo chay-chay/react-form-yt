@@ -1,9 +1,9 @@
 import React from "react";
-import useForm from './useForm'
-import validate from './validateInfo'
+import useForm from "./useForm";
+import validate from "./validateInfo";
 
 const FormSignup = () => {
-    const { handleChange, values, handleSubmit } = useForm(validate)
+  const { handleChange, values, handleSubmit, errors } = useForm(validate);
   return (
     <div>
       <div className="form-content-right">
@@ -25,6 +25,8 @@ const FormSignup = () => {
               value={values.username}
               onChange={handleChange}
             />
+            {errors.username && <p>{errors.username}</p>}
+            {/* If errors.username true, then it will shows errors.username */}
           </div>
 
           <div className="form-input">
@@ -39,7 +41,8 @@ const FormSignup = () => {
               className="form-input"
               value={values.email}
               onChange={handleChange}
-            />
+                      />
+                      {errors.email && <p>{errors.email}</p>}
           </div>
 
           <div className="form-input">
@@ -55,6 +58,7 @@ const FormSignup = () => {
               value={values.password}
               onChange={handleChange}
             />
+            {errors.password && <p>{errors.password}</p>}
           </div>
 
           <div className="form-input">
@@ -70,6 +74,7 @@ const FormSignup = () => {
               value={values.password2}
               onChange={handleChange}
             />
+            {errors.password2 && <p>{errors.password2}</p>}
           </div>
           <button className="form-input-btn" type="submit">
             Sign up
