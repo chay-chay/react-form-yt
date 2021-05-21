@@ -1,12 +1,12 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
-const userForm = () => {
-  const [values, setValues] = useState({
-    username: "",
-    email: "",
-    password: "",
-    password2: "",
-  });
+const useForm = () => {
+    const [values, setValues] = useState({
+        username: '',
+        email: '',
+        password: '',
+        password2: ''
+      });
   const [errors, setErrors] = useState({});
 
     const handleChange = e => {
@@ -16,7 +16,7 @@ const userForm = () => {
             [name]: value,
         });
     }
-    return { handleChange };
+    return { handleChange, values };
 };
 
-export default userForm;
+export default useForm;

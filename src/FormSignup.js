@@ -1,6 +1,7 @@
 import React from "react";
-
+import useForm from './useForm'
 const FormSignup = () => {
+    const { handleChange, values } = useForm()
   return (
     <div>
       <div className="form-content-right">
@@ -19,6 +20,8 @@ const FormSignup = () => {
               name="username"
               placeholder="Enter your username"
               className="form-input"
+              value={values.username}
+              onChange={handleChange}
             />
           </div>
 
@@ -32,6 +35,8 @@ const FormSignup = () => {
               name="email"
               placeholder="Enter your email"
               className="form-input"
+              value={values.email}
+              onChange={handleChange}
             />
           </div>
 
@@ -45,6 +50,8 @@ const FormSignup = () => {
               name="password"
               placeholder="Enter your password"
               className="form-input"
+              value={values.password}
+              onChange={handleChange}
             />
           </div>
 
@@ -58,6 +65,8 @@ const FormSignup = () => {
               name="password2"
               placeholder="Enter your password2"
               className="form-input"
+              value={values.password2}
+              onChange={handleChange}
             />
           </div>
           <button className="form-input-btn" type="submit">
