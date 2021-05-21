@@ -33,9 +33,9 @@ const FormSignup = () => {
               placeholder="Enter your email"
               className="form-input"
             />
-                  </div>
-                  
-                  <div className="form-input">
+          </div>
+
+          <div className="form-input">
             <label htmlFor="password" className="form-label">
               Password
             </label>
@@ -46,9 +46,9 @@ const FormSignup = () => {
               placeholder="Enter your password"
               className="form-input"
             />
-                  </div>
-                  
-                  <div className="form-input">
+          </div>
+
+          <div className="form-input">
             <label htmlFor="password2" className="form-label">
               Confirmed Password
             </label>
@@ -59,7 +59,13 @@ const FormSignup = () => {
               placeholder="Enter your password2"
               className="form-input"
             />
-                  </div>
+          </div>
+          <button className="form-input-btn" type="submit">
+            Sign up
+          </button>
+          <span className="form-input-login">
+            Already have an account? Login <a href="#">here</a>{" "}
+          </span>
         </form>
       </div>
     </div>
