@@ -9,9 +9,10 @@ const userForm = () => {
   });
   const [errors, setErrors] = useState({});
 
-  const handleChange = (e) =>
+    const handleChange = (e) =>
+      const {name, value} = e.target
     setValue({
       ...values,
-      [e.target.name]: e.target.value,
+      [name]: value,
     });
 };
