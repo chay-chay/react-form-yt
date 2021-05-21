@@ -1,12 +1,20 @@
-import React from 'react'
-import FormSignup from './FormSignup'
+import React, { useState } from "react";
+import FormSignup from "./FormSignup";
+import FormSuccess from "./FormSuccess";
 
 const Form = () => {
-    return (
-        <div>
-            <FormSignup />
-        </div>
-    )
-}
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
-export default Form
+  function submitForm() {
+    setIsSubmitted(true);
+  }
+
+  return (
+    <div>
+      {!isSubmitted ? <FormSignup submitForm={submitForm} /> : <FormSuccess />}{" "}
+      
+    </div>
+  );
+};
+
+export default Form;

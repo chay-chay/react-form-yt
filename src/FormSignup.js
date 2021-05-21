@@ -1,10 +1,13 @@
 import React from "react";
 import useForm from "./useForm";
 import validate from "./validateInfo";
-import './Form.css'
+import "./Form.css";
 
-const FormSignup = () => {
-  const { handleChange, values, handleSubmit, errors } = useForm(validate);
+const FormSignup = ({ submitForm }) => {
+  const { handleChange, values, handleSubmit, errors } = useForm(
+    submitForm,
+    validate
+  );
   return (
     <div>
       <div className="form-content-right">
@@ -42,8 +45,8 @@ const FormSignup = () => {
               className="form-input"
               value={values.email}
               onChange={handleChange}
-                      />
-                      {errors.email && <p>{errors.email}</p>}
+            />
+            {errors.email && <p>{errors.email}</p>}
           </div>
 
           <div className="form-inputs">
