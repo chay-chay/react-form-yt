@@ -9,10 +9,14 @@ const userForm = () => {
   });
   const [errors, setErrors] = useState({});
 
-    const handleChange = (e) =>
-      const {name, value} = e.target
-    setValue({
-      ...values,
-      [name]: value,
-    });
+    const handleChange = e => {
+        const { name, value } = e.target
+        setValues({
+            ...values,
+            [name]: value,
+        });
+    }
+    return { handleChange };
 };
+
+export default userForm;
