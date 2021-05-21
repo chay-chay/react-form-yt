@@ -3,7 +3,7 @@ import useForm from './useForm'
 import validate from './validateInfo'
 
 const FormSignup = () => {
-    const { handleChange, values, handleSubmit, errors } = useForm()
+    const { handleChange, values, handleSubmit } = useForm(validate)
   return (
     <div>
       <div className="form-content-right">
